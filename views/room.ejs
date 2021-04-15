@@ -62,11 +62,25 @@
                   <i class="fas fa-comment-alt"></i>
                   <span>Chat</span>
                </div>
+               <div onclick= "NewTab()" class="main__controls__button">
+               <i class = "fas fa-chalkboard"></i>
+               <span>White Board</span>
+               </div>
+               <script>
+               function NewTab(){
+                    window.open("https://useboard.herokuapp.com/","_blank");
+               }
+               </script>
             </div>
             <div class="main__controls__block">
-               <div class="main__controls__button">
+               <div onclick = onClose(); class="main__controls__button">
                   <span class="leave_meeting">Leave Meeting</span>
                </div>
+               <script>
+               function onClose(){
+               window.close();
+               }
+               </script>
             </div>
          </div>
       </div>
