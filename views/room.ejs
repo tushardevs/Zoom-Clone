@@ -49,19 +49,29 @@
                   <span>Stop Video</span>
                </div>
             </div>
+
             <div class="main__controls__block">
-               <div class="main__controls__button">
-                  <i class="fas fa-shield-alt"></i>
-                  <span>Security</span>
-               </div>
-               <div class="main__controls__button">
+<!--                <div class="main__controls__button"> -->
+<!--                   <i class="fas fa-shield-alt"></i> -->
+<!--                   <span>Security</span> -->
+<!--                </div> -->
+
+               <div onclick = "setParticipants()" class="main__controls__button">
                   <i class="fas fa-user-friends"></i>
                   <span>Participants</span>
+                  <span class="badge badge-secondary" id="participants">1</span>
                </div>
-               <div class="main__controls__button">
+
+               <div onclick = "toggleChat()" class="main__controls__button">
                   <i class="fas fa-comment-alt"></i>
                   <span>Chat</span>
                </div>
+
+               <div onclick = "shareLink()" class="main__controls__button">
+                    <i class="far fa-share-square"></i>
+                    <span>Share Link</span>
+               </div>
+
                <div onclick= "NewTab()" class="main__controls__button">
                <i class = "fas fa-chalkboard"></i>
                <span>White Board</span>

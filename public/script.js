@@ -6,6 +6,7 @@ const myPeer = new Peer(undefined, {
   port: '443'
 })
 let myVideoStream;
+let toggle = true;
 const myVideo = document.createElement('video')
 myVideo.muted = true;
 const peers = {}
@@ -131,4 +132,54 @@ const setPlayVideo = () => {
     <span>Play Video</span>
   `
   document.querySelector('.main__video_button').innerHTML = html;
+}
+
+const show = () => {
+  toggle = !toggle;
+  const html = `<div class="hide main__right">
+         <div class="main__header">
+            <h6>Chat</h6>
+         </div>
+         <div class="main__chat_window">
+            <ul class="messages">
+               
+            </ul>
+
+         </div>
+         <div class="main__message_container">
+            <input id="chat_message" type="text" placeholder="Type message here...">
+         </div>
+      </div>
+  `
+  console.log(document.getElementsByClassName("main__right")[0]);
+  document.getElementsByClassName("main__right")[0].innerHTML = html;
+}
+
+function toggleChat() {
+  var x = document.getElementsByClassName("main__right")[0];
+  var y = document.getElementsByClassName("main")[0];
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function shareLink() {
+  let link = window.location.href;
+  // Clipboard()._write(link);
+  navigator.clipboard.writeText(link).then(function() {
+    /* clipboard successfully set */
+    alert("Link copied");
+  }, function() {
+    /* clipboard write failed */
+    console.log("failed");
+  });
+}
+
+function setParticipants() {
+  const myself = 1
+  const participants = document.getElementsByClassName("video").length;
+  console.log(participants);
+  participants.innerHTML = (count + myself)
 }
