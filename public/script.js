@@ -178,9 +178,8 @@ function shareLink() {
 }
 
 function setParticipants() {
-  const myself = 1
   const participants = document.querySelectorAll("video").length;
   console.log(participants);
   const count = document.getElementById("participants");
-  count.innerHTML = (participants + myself)
+  count.innerHTML = participants;
 }
