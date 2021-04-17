@@ -88,7 +88,11 @@
                </div>
                <script>
                function onClose(){
-               window.close();
+               let exit = confirm("Do you want to leave this meeting!!!");
+               console.log(exit);
+               if(exit){
+                  window.close();
+               }
                }
                </script>
             </div>
