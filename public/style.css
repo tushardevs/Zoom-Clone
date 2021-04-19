@@ -86,6 +86,7 @@
 .main__message_container {
     padding: 22px 12px;
     display: flex;
+    background-color: #dddddd;
 }
 
 .main__message_container input {
